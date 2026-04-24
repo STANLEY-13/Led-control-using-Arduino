@@ -1,7 +1,7 @@
 ## NAME : STANLEY S
 ## REG NO : 212223110054
 
-# Led control using Arduino
+# EXP-01 Led control using Arduino
 
 ## AIM
 To design and implement a system for LED control using an Arduino microcontroller and a push button.
@@ -65,28 +65,35 @@ Weighing Machines </br>
 
 ## PROGRAM
 ```
-void setup() 
-{
-  // put your setup code here, to run once:
-	pinMode(6,INPUT);
-  pinMode(13,OUTPUT);
+bool button_status;
+
+void setup() {
+  pinMode(10,OUTPUT);
+  pinMode(5,INPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(13,HIGH);
-  delay(1000);
-  digitalWrite(13,LOW);
-  delay(3000);
+  button_status=digitalRead(5);
+  if (button_status== HIGH)
+  {
+    digitalWrite(10,HIGH);
+    delay(1000);
+    digitalWrite(10,LOW);
+    delay(3000);
+  }
+  else
+  digitalWrite(10,LOW);
 }
 ```
 ## OUTPUT
 
 ### LED BLINK OFF
-<img width="1920" height="1080" alt="Screenshot 2026-04-24 094459" src="https://github.com/user-attachments/assets/25f0d239-c46a-468e-9f54-190715a6de2b" />
+<img width="1260" height="883" alt="image" src="https://github.com/user-attachments/assets/d85a2620-0f8c-4183-a0c4-471b4da88dfe" />
+
 
 ### LED BLINK ON
-<img width="1920" height="1080" alt="Screenshot 2026-04-24 094528" src="https://github.com/user-attachments/assets/574ce693-b0bf-4f71-962d-e80b10a9ae23" />
+<img width="1920" height="1080" alt="Screenshot 2026-04-24 094528" src="https://github.com/user-attachments/assets/3789fd8b-f4e1-44a8-b7f4-c6ef6752767e" />
+
 
 
 ## RESULT
