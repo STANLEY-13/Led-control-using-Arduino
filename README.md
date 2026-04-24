@@ -1,4 +1,7 @@
-# Led-control-using-Arduino
+## NAME : STANLEY S
+## REG NO : 212223110054
+
+# Led control using Arduino
 
 ## AIM
 To design and implement a system for LED control using an Arduino microcontroller and a push button.
@@ -58,9 +61,33 @@ Emergency Signaling System </br>
 Weighing Machines </br>
 
 ## CIRCUIT DIAGRAM
+<img width="3300" height="2550" alt="exp 1 cd" src="https://github.com/user-attachments/assets/5c9f6647-0061-4e69-888a-670a886f938c" />
 
 ## PROGRAM
+```
+void setup() 
+{
+  // put your setup code here, to run once:
+	pinMode(6,INPUT);
+  pinMode(13,OUTPUT);
+}
 
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(13,HIGH);
+  delay(1000);
+  digitalWrite(13,LOW);
+  delay(3000);
+}
+```
 ## OUTPUT
 
+### LED BLINK OFF
+<img width="1920" height="1080" alt="Screenshot 2026-04-24 094459" src="https://github.com/user-attachments/assets/25f0d239-c46a-468e-9f54-190715a6de2b" />
+
+### LED BLINK ON
+<img width="1920" height="1080" alt="Screenshot 2026-04-24 094528" src="https://github.com/user-attachments/assets/574ce693-b0bf-4f71-962d-e80b10a9ae23" />
+
+
 ## RESULT
+Thus, The Simulation of LED in Arduino UNO is Successfully Completed.
